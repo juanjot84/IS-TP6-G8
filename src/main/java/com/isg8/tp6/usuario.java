@@ -18,7 +18,7 @@ public class Usuario {
 
     }
 
-    private void inicializarValores() {
+    public void inicializarValores() {
         nombre = "Juan Carlos";
         apellido = "Cardozo";
         telefono = "261-5565656";
@@ -27,8 +27,6 @@ public class Usuario {
     }
 
     public boolean login(String email, String password) {
-        this.inicializarValores();
-        
         if (email != "" && password != "" && email == this.email && password == this.password) {
             return true;
         } else {

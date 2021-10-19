@@ -25,6 +25,7 @@ public class UsuarioTest {
     @BeforeEach
     public void beforeEach() {
         usuario = new Usuario();
+        usuario.inicializarValores();
     }
 
     @Test
