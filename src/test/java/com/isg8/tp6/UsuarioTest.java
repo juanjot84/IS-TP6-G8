@@ -4,6 +4,7 @@ import org.junit.jupiter.api.*;
 
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class)
 public class UsuarioTest {
+
     Usuario usuario;
 
     @BeforeAll
@@ -23,7 +24,7 @@ public class UsuarioTest {
 
     @BeforeEach
     public void beforeEach() {
-       usuario= new Usuario();
+        usuario = new Usuario();
     }
 
     @Test
@@ -43,14 +44,16 @@ public class UsuarioTest {
     @Test
     @Order(2)
     public void testVerificarPassword() {
-
+        String password = "Aa$12345678";
+        boolean result = usuario.verificarPassword(password);
+        Assertions.assertTrue(result);
+        System.out.println("Test_Verificar_Password_Pass: " + String.valueOf(result));
 
     }
 
     @Test
     @Order(3)
     public void testLogin() {
-
 
     }
 

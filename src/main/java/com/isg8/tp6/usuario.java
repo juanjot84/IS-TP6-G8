@@ -1,4 +1,5 @@
 package com.isg8.tp6;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -13,7 +14,7 @@ public class Usuario {
     private String email;
     private String password;
 
-    public Usuario () {
+    public Usuario() {
 
     }
 
@@ -24,8 +25,8 @@ public class Usuario {
 
     public String verificarEmail(String email) {
         String result;
-        String emailPattern = "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@" +
-                "[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})$";
+        String emailPattern = "^[_a-z0-9-]+(\\.[_a-z0-9-]+)*@"
+                + "[a-z0-9-]+(\\.[a-z0-9-]+)*(\\.[a-z]{2,4})$";
         Pattern pattern = Pattern.compile(emailPattern);
 
         Matcher matcher = pattern.matcher(email);
@@ -38,7 +39,8 @@ public class Usuario {
     }
 
     public boolean verificarPassword(String password) {
+        String pattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
 
-        return true;
+        return password.matches(pattern);
     }
 }
