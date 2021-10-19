@@ -43,18 +43,21 @@ public class UsuarioTest {
 
     @Test
     @Order(2)
-    public void testVerificarPassword() {
-        String password = "Aa$12345678";
-        boolean result = usuario.verificarPassword(password);
-        Assertions.assertTrue(result);
+    public void verificarSeguridadPassword() {
+        String password = "3H03rt93GH";
+        boolean result = usuario.verificarSeguridadPassword(password);
         System.out.println("Test_Verificar_Password_Pass: " + String.valueOf(result));
-
+        Assertions.assertTrue(result);
     }
 
     @Test
     @Order(3)
     public void testLogin() {
-
+        String email = "jcarlos@gmail.com";
+        String password = "3H03rt93GH";
+        boolean result = usuario.login(email, password);
+        System.out.println("Test_Login_Pass: " + String.valueOf(result));
+        Assertions.assertTrue(result);
     }
 
 }
