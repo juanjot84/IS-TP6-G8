@@ -35,6 +35,21 @@ public class Producto {
         this.descripcion = descripcion;
     }
     
+    public boolean verificarDescripcionProducto(String descripcion) {
+        if (this.descripcion.isEmpty() || this.descripcion.length()>255) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+    
+    public boolean verificarNombreProducto(String nombreProducto) {
+        if(this.nombreProducto.isEmpty() || this.nombreProducto.length()>255) {
+            return false;
+        } else {
+            return true;
+        }
+    }
     
 
     
