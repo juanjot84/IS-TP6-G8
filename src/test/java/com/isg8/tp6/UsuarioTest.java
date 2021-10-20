@@ -31,19 +31,26 @@ public class UsuarioTest {
     @Test
     @Order(1)
     public void testVerificarEmail() {
-
         String email = "jcarlos@gmail.com";
         String resultEsperado = "Email valido";
         String result;
-
         result = usuario.verificarEmail(email);
-
         Assertions.assertEquals(resultEsperado, result);
-        System.out.println(result);
+        System.out.println("Test_Verificar_Email: "+result);
+    }
+    
+    @Test
+    @Order(2)
+    public void testVerificarNumeroTelefonico() {
+        String numTel = "+54-261-5052369";
+        boolean result;
+        result = usuario.verificarNumeroTelefonico(numTel);
+        Assertions.assertTrue(result);
+        System.out.println("Test_Verificar_Teléfono: "+result);
     }
 
     @Test
-    @Order(2)
+    @Order(3)
     public void verificarSeguridadPassword() {
         String password = "3H03rt93GH";
         boolean result = usuario.verificarSeguridadPassword(password);
@@ -52,7 +59,7 @@ public class UsuarioTest {
     }
 
     @Test
-    @Order(3)
+    @Order(4)
     public void testLogin() {
         String email = "jcarlos@gmail.com";
         String password = "3H03rt93GH";

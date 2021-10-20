@@ -48,6 +48,17 @@ public class Usuario {
         }
         return result;
     }
+    
+    public boolean verificarNumeroTelefonico(String numTel) {
+    	boolean result = false;
+    	String phonePattern = "^[+0-9-\\(\\)\\s]*{6,14}$";
+    	Pattern pattern = Pattern.compile(phonePattern);
+    	
+    	Matcher matcher = pattern.matcher(numTel);
+    	if (matcher.matches()) result = true;
+  
+    	return result;
+    }
 
     public boolean verificarSeguridadPassword(String password) {
         //String pattern = "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=])(?=\\S+$).{8,}";
