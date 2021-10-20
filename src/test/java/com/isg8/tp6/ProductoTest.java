@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Order;
 
 public class ProductoTest {
     
-    private Producto producto = new Producto();
+    private Producto producto;
     
     public ProductoTest() {
     }
@@ -26,6 +26,7 @@ public class ProductoTest {
     
     @BeforeEach
     public void setUp() {
+        producto = new Producto();
     }
     
     @AfterEach
