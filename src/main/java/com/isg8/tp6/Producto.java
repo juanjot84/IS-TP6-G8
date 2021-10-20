@@ -8,12 +8,7 @@ public class Producto {
     public Producto() {
         
     }
-    
-    public inicializarProducto() {
-        this.nombreProducto = "Celular Samsung J7";
-        this.descripcion = "El mejor celular";
-    }
-    
+
     public Producto(String nombreProducto, String descripcion) {
         this.nombreProducto = nombreProducto;
         this.descripcion = descripcion;
@@ -35,20 +30,24 @@ public class Producto {
         this.descripcion = descripcion;
     }
     
-    public boolean verificarDescripcionProducto(String descripcion) {
-        if (this.descripcion.isEmpty() || this.descripcion.length()>255) {
-            return false;
+    public String verificarDescripcionProducto(String descripcion) {
+        String resultado;
+        if (descripcion.isEmpty() || descripcion.length()>255) {
+            return resultado = "Supera los caracteres o está vacio.";
         } else {
-            return true;
+            return resultado = "Descripción asignada correctamente.";
         }
     }
     
-    public boolean verificarNombreProducto(String nombreProducto) {
-        if(this.nombreProducto.isEmpty() || this.nombreProducto.length()>255) {
-            return false;
+    public String verificarNombreProducto(String nombreProducto) {
+        String resultado;
+        if(nombreProducto.isEmpty() || nombreProducto.length()>255) {
+            resultado = ("Supera los caracteres o está vacio.");
         } else {
-            return true;
+            resultado = ("Nombre asignado correctamente.");
         }
+        
+        return resultado;
     }
     
 
