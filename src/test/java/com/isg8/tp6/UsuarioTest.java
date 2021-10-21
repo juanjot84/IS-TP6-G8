@@ -67,12 +67,14 @@ public class UsuarioTest {
         System.out.println("Test_Login_Pass: " + String.valueOf(result));
         Assertions.assertTrue(result);
     }
+    
     @Test
     @Order(5)
     public void testVerificarClaveDistintaVacio(){
         String password = "1234";
         String result = usuario.verificarClaveDistintaVacio(password);
-        String resultEsperado "la contrasenia es correcta";
-        Assertions.assertTrue(resultEsperado,result);
+        String resultEsperado = "la contrasenia es correcta";
+        Assertions.assertEquals(resultEsperado,result);
+        System.out.println("Test_Verificar_Clave_NoVacia: "+result);
     }
 }

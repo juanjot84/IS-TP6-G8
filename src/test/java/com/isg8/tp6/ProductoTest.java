@@ -41,6 +41,7 @@ public class ProductoTest {
         String esperado = "Nombre asignado correctamente.";
         resultado = producto.verificarNombreProducto(nombre);
         Assertions.assertEquals(esperado,resultado);
+        System.out.println("Test_Verificar_Nombre_Producto: "+resultado);
     }
     
     @Test
@@ -50,5 +51,6 @@ public class ProductoTest {
         String esperado = "Descripción asignada correctamente.";
         String resultado = producto.verificarDescripcionProducto(descripcion);
         Assertions.assertEquals(esperado,resultado);
+        System.out.println("Test_Verificar_Descripcion_Producto: "+resultado);
     }  
 }

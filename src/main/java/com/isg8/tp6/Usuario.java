@@ -78,12 +78,11 @@ public class Usuario {
     }
 
     public String verificarClaveDistintaVacio(String password){
-        String result;
+        String result = "la contrasenia es correcta";
         if (password.isEmpty()){
             return result = "la contrasenia esta vacia";
-        }else { return result = "la contrasenia es correcta";
-
         }
-
+        
+        return result;
     }
 }
