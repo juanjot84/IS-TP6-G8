@@ -13,6 +13,8 @@ public class Usuario {
     private String situacionIva;
     private String email;
     private String password;
+    private String nombreUsuario;
+
 
     public Usuario() {
 
@@ -84,5 +86,20 @@ public class Usuario {
         }
         
         return result;
+    }
+
+    public boolean VerificarLongitudUsuario (String nombreUsuario){
+        boolean result = false;
+        if (nombreUsuario.lenght() > 4){
+            return result = true;
+        }
+    }
+
+    public boolean VerificareMailVacio (String email){
+        boolean result = false;
+        if (email.isEmpty()){
+            return result = true;
+        }
+
     }
 }
