@@ -77,4 +77,22 @@ public class UsuarioTest {
         Assertions.assertEquals(resultEsperado,result);
         System.out.println("Test_Verificar_Clave_NoVacia: "+result);
     }
+
+    @Order(6)
+    public void testVerificarEmail() {
+        String email = "juanca@gmail.com";
+        boolean result;
+        result = usuario.VerificareMailVacio(email);
+        Assertions.assertTrue(result);
+        System.out.println("Test Verificar Email: "+result);
+    }
+
+    @Order(7)
+    public void testVerificarLongitudNombreUsuario() {
+        String nombreUsuario = "juancardoz";
+        boolean result;
+        result = usuario.VerificarLongitudUsuario(nombreUsuario);
+        Assertions.assertTrue(result);
+        System.out.println("Test Verificar Longitud nombre de usuario: "+result);
+    }
 }
