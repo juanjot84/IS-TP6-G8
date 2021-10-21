@@ -77,4 +77,13 @@ public class Usuario {
         return password.matches(pattern);
     }
 
+    public String verificarClaveDistintaVacio(String password){
+        String result;
+        if (password.isEmpty()){
+            return result = "la contrasenia esta vacia";
+        }else { return result = "la contrasenia es correcta";
+
+        }
+
+    }
 }
