@@ -88,18 +88,17 @@ public class Usuario {
         return result;
     }
 
-    public boolean VerificarLongitudUsuario (String nombreUsuario){
+    public boolean VerificarLongitudUsuario(String nombreUsuario){
         boolean result = false;
-        if (nombreUsuario.lenght() > 4){
-            return result = true;
-        }
+        if (nombreUsuario.length() > 4) result = true;
+        
+        return result;
     }
 
-    public boolean VerificareMailVacio (String email){
-        boolean result = false;
-        if (email.isEmpty()){
-            return result = true;
-        }
-
+    public boolean VerificareMailVacio(String email){
+        boolean result = true;
+        if (email.isEmpty()) result = false;
+    
+		return result;
     }
 }
